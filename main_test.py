@@ -14,3 +14,7 @@ class MyTest(LiveServerTestCase):
     def test_server_is_up_and_running(self):
         response = requests.get(self.get_server_url())
         self.assertEqual(response.status_code, 200)
+
+    def test_greeting(self):
+        response = requests.get(self.get_server_url() + "/greet/tester")
+        self.assertEqual(response.text, "Hello: tester")
