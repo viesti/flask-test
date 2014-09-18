@@ -1,4 +1,4 @@
-import urllib2, requests
+import requests
 from flask import Flask
 from flask.ext.testing import LiveServerTestCase
 from main import app
