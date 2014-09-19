@@ -9,7 +9,7 @@ def hello():
     return "Hello World!"
 
 @app.route("/greet/<name>")
-def gree(name):
+def greet(name):
     global args
     args = request.args.copy()
     return "Hello: " + name
